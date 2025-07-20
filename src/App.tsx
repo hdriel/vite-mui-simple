@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
-import { Button } from '@mui/material';
+import { Typography, Button } from 'mui-simple';
 import './App.css';
 
 function App() {
@@ -17,14 +17,18 @@ function App() {
                     <img src={reactLogo} className="logo react" alt="React logo" />
                 </a>
             </div>
-            <h1>Vite + React</h1>
+            <Typography component="h1">Vite + React</Typography>
             <div className="card">
-                <Button onClick={() => setCount((count) => count + 1)}>count is {count}</Button>
+                <Button variant="contained" startIcon="People" onClick={() => setCount((count) => count + 1)}>
+                    count is {count}
+                </Button>
                 <p>
                     Edit <code>src/App.tsx</code> and save to test HMR
                 </p>
             </div>
-            <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
+            <Typography component="p" className="read-the-docs">
+                Click on the Vite and React logos to learn more
+            </Typography>
         </>
     );
 }
