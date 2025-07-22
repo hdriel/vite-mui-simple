@@ -136,11 +136,15 @@ const App = () => {
                 </div>
 
                 <div>
-                    <Breadcrumbs aria-label="breadcrumb">
-                        <Link href="#">Home</Link>
-                        <Link href="#">Catalog</Link>
-                        <Typography color="text.primary">Current Page</Typography>
-                    </Breadcrumbs>
+                    <Breadcrumbs
+                        aria-label="breadcrumb"
+                        separator={'~'}
+                        links={[
+                            { label: 'Home', url: '/' },
+                            { label: 'Catalog', url: '/' },
+                            { label: 'Current Page', url: '/' },
+                        ]}
+                    />
                 </div>
 
                 <div>
@@ -312,7 +316,7 @@ const App = () => {
                 </div>
 
                 <div>
-                    <div style={{ width: '150px' }}>
+                    <div style={{ width: '150px', position: 'relative' }}>
                         <TextEllipsis>Some very long text that will be truncated with an ellipsis.</TextEllipsis>
                     </div>
                 </div>
