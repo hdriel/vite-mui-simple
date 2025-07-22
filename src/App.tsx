@@ -49,7 +49,7 @@ function App() {
                     <img key={i} src={module.default} width={75} alt={`png image ${i}`} />
                 ))}
             </div>
-            <Link url="/another-route/">go to another route</Link>
+            <Link url="/another-route/">show mui-simple examples page</Link>
         </>
     );
 }
