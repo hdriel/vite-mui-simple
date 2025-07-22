@@ -1,3 +1,3 @@
 # React + TypeScript + Vite
 
-[demo](https://aesthetic-swan-a855e7.netlify.app/)
+[netlify demo](https://vite-mui-simple.netlify.app/)
