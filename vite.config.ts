@@ -17,12 +17,20 @@ export default defineConfig({
         },
     },
     build: {
-        target: 'esnext', // for dynamic module imports
+        target: 'esnext', // for dynamic module imports, if not need to dynamic module import remove this
         rollupOptions: {
             // for multiple routes
             input: {
                 main: resolve(__dirname, 'index.html'),
                 another: resolve(__dirname, 'another-route/index.html'),
+            },
+
+            output: {
+                manualChunks(id) {
+                    if (id.includes('node_modules')) {
+                        return id.split('node_modules/')[1].split('/')[0];
+                    }
+                },
             },
         },
     },
