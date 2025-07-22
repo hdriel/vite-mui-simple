@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
-import { Typography, Button, Link } from 'mui-simple';
+import { Button, Link } from 'mui-simple';
 import './App.css';
+import cssModuleOne from './one.module.css';
+import cssModuleTwo from './two.module.css';
 
 // dynamic import
 const logoName = 'apple';
@@ -24,9 +26,8 @@ function App() {
                     <img src={reactLogo} className="logo react" alt="React logo" />
                 </a>
             </div>
-            <Typography component="h1" justifyContent="center" fullWidth size="2em">
-                Mui-Simple + Vite + React
-            </Typography>
+            <h1 className={cssModuleOne.highlight}>Mui-Simple + Vite + React</h1>
+            <h3 className={cssModuleTwo.highlight}>starter vite project with vite course features</h3>
             <div className="card">
                 <Button variant="contained" startIcon="People" onClick={() => setCount((count) => count + 1)}>
                     count is {count}
