@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import { Button, Link } from 'mui-simple';
 import './App.css';
+import './nested.css';
 import cssModuleOne from './one.module.css';
 import cssModuleTwo from './two.module.css';
 
@@ -33,6 +34,11 @@ function App() {
                     count is {count}
                 </Button>
             </div>
+            <ul className="styled-list">
+                <li className="item">Item 1</li>
+                <li className="item">Item 2</li>
+                <li className="item">Item 3</li>
+            </ul>
             <div className="image">
                 <img src={module.default} width={150} alt="logoName='apple'" />
             </div>
