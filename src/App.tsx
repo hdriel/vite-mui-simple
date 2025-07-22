@@ -16,6 +16,7 @@ const modules = import.meta.glob<{ default: string }>(`./png-images/*.png`, { ea
 
 function App() {
     const [count, setCount] = useState(0);
+    const isDev = import.meta.env.DEV;
 
     return (
         <>
@@ -31,9 +32,10 @@ function App() {
             <h3 className={cssModuleTwo.highlight}>starter vite project with vite course features</h3>
             <div className="card">
                 <Button variant="contained" startIcon="People" onClick={() => setCount((count) => count + 1)}>
-                    count is {count}
+                    count is {count} {isDev && 'dev'}
                 </Button>
             </div>
+            <p>{import.meta.env.VITE_MESSAGE}</p>
             <ul className="styled-list">
                 <li className="item">Item 1</li>
                 <li className="item">Item 2</li>
