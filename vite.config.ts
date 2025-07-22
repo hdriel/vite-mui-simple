@@ -6,6 +6,7 @@ import { resolve } from 'path'; // install for this package: npm i -D @types/nod
 export default defineConfig({
     plugins: [react()],
     build: {
+        target: 'esnext',
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'index.html'),
